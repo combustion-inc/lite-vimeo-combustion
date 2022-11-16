@@ -113,6 +113,18 @@ export class LiteVimeoEmbed extends HTMLElement {
     }
   }
 
+  get mobileAspect(): boolean {
+    return this.hasAttribute('mobileAspect');
+  }
+
+  set mobileAspect(value: boolean) {
+    if (value) {
+      this.setAttribute('mobileAspect', 'mobileAspect');
+    } else {
+      this.removeAttribute('mobileAspect');
+    }
+  }
+
 
   /**
    * Define our shadowDOM for the component
@@ -120,6 +132,12 @@ export class LiteVimeoEmbed extends HTMLElement {
    */
   private setupDom(): void {
     const shadowDom = this.attachShadow({mode: 'open'});
+
+    var paddingBottom = "calc(100% / (16 / 9))";
+    if(this.mobileAspect) {
+      paddingBottom = "calc(100%)"
+    }
+
     shadowDom.innerHTML = `
       <style>
         :host {
@@ -127,7 +145,7 @@ export class LiteVimeoEmbed extends HTMLElement {
           display: block;
           position: relative;
           width: 100%;
-          padding-bottom: calc(100%);
+          padding-bottom: ${paddingBottom};
         }
 
         #frame, #fallbackPlaceholder, iframe {
