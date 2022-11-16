@@ -116,6 +116,7 @@ export class LiteVimeoEmbed extends HTMLElement {
 
   /**
    * Define our shadowDOM for the component
+          Modified: padding-bottom: calc(100% / (16 / 9));
    */
   private setupDom(): void {
     const shadowDom = this.attachShadow({mode: 'open'});
@@ -126,7 +127,7 @@ export class LiteVimeoEmbed extends HTMLElement {
           display: block;
           position: relative;
           width: 100%;
-          padding-bottom: calc(100% / (16 / 9));
+          padding-bottom: calc(100%);
         }
 
         #frame, #fallbackPlaceholder, iframe {
