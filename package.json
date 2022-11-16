@@ -1,10 +1,10 @@
 {
-  "name": "@slightlyoff/lite-vimeo",
-  "description": "A web component that loads Vimeo embed iframes faster. ShadowDom based version of Paul Irish' concept.",
+  "name": "combustion-inc/lite-vimeo-combustion",
+  "description": "A web component that loads Vimeo embed iframes faster. ShadowDom based version of Paul Irish' concept. Forked to add looping functionality.",
   "author": "Alex Russell <slightlyoff@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git@github.com:slightlyoff/lite-vimeo.git"
+    "url": "git@github.com:combustion-inc/lite-vimeo-combustion.git"
   },
   "scripts": {
     "build": "tsc --project tsconfig.json",
@@ -19,7 +19,7 @@
     "lite-vimeo.js.map"
   ],
   "license": "MIT",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "lite-vimeo.js",
   "module": "lite-vimeo.js",
   "types": "lite-vimeo.d.ts",
