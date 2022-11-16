@@ -419,10 +419,10 @@ export class LiteVimeoEmbed extends HTMLElement {
   }
 }
 // Register custom element
-customElements.define('lite-vimeo', LiteVimeoEmbed);
+customElements.define('lite-vimeo-combustion', LiteVimeoEmbed);
 
 declare global {
   interface HTMLElementTagNameMap {
-    'lite-vimeo': LiteVimeoEmbed;
+    'lite-vimeo-combustion': LiteVimeoEmbed;
   }
 }

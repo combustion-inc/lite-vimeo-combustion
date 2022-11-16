@@ -7,7 +7,7 @@
       content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
     />
     <title>lite-vimeo demo</title>
-    <script type="module" src="../lite-vimeo.js"></script>
+    <script type="module" src="../lite-vimeo-combustion.js"></script>
     <style>
       * {
         box-sizing: content-box;
@@ -35,33 +35,33 @@
 
     <h3>Basic Usage</h3>
     <pre>
-&lt;lite-vimeo videoid=&quot;364402896&quot;&gt;&lt;/lite-vimeo&gt;
+&lt;lite-vimeo-combustion videoid=&quot;364402896&quot;&gt;&lt;/lite-vimeo&gt;
     </pre>
-    <lite-vimeo videoid="364402896"></lite-vimeo>
+    <lite-vimeo-combustion videoid="364402896"></lite-vimeo-combustion>
 
     <h3>Add Video Title</h3>
     <pre>
 
-&lt;lite-vimeo videoid=&quot;364402896&quot; videotitle=&quot;This is a video title&quot;&gt;&lt;/lite-vimeo&gt;
+&lt;lite-vimeo-combustion videoid=&quot;364402896&quot; videotitle=&quot;This is a video title&quot;&gt;&lt;/lite-vimeo&gt;
     </pre>
-    <lite-vimeo
+    <lite-vimeo-combustion
       videoid="364402896"
       videotitle="This is a video title"
-    ></lite-vimeo>
+    ></lite-vimeo-combustion>
 
     <h3>Change "Play" for Locale</h3>
     <pre>
-&lt;lite-vimeo
+&lt;lite-vimeo-combustion
    videoid=&quot;364402896&quot;
    videoplay=&quot;Mirar&quot;
    videotitle=&quot;Mis hijos se burlan de mi espa&ntilde;ol&quot;&gt;
-&lt;/lite-vimeo&gt;
+&lt;/lite-vimeo-combustion&gt;
     </pre>
-    <lite-vimeo
+    <lite-vimeo-combustion
       videoid="364402896"
       videoplay="Mirar"
       videotitle="Mis hijos se burlan de mi español"
-    ></lite-vimeo>
+    ></lite-vimeo-combustion>
 
     <h3>Style It</h3>
     <p>Height and Width are responsive in the component.</p>
@@ -70,17 +70,17 @@
 &lt;div class=&quot;styleIt&quot;&gt;&#10;  &lt;lite-vimeo videoid=&quot;364402896&quot;&gt;&lt;/lite-vimeo&gt;&#10;&lt;/div&gt;
     </pre>
     <div class="styleIt">
-      <lite-vimeo videoid="364402896"></lite-vimeo>
+      <lite-vimeo-combustion videoid="364402896"></lite-vimeo-combustion>
     </div>
 
     <h3>Set video start time</h3>
     <pre>
-&lt;lite-vimeo 
+&lt;lite-vimeo-combustion 
    videoid=&quot;364402896&quot; 
-   <b>start=&quot;5m30s&quot;</b>&gt;&lt;/lite-vimeo&gt;
+   <b>start=&quot;5m30s&quot;</b>&gt;&lt;/lite-vimeo-combustion&gt;
     </pre>
     <div>
-      <lite-vimeo videoid="364402896" start="5m30s"></lite-vimeo>
+      <lite-vimeo-combustion videoid="364402896" start="5m30s"></lite-vimeo-combustion>
     </div>
 
     <div id="bigBlock">
@@ -89,23 +89,23 @@
     <h3>AutoLoad with IntersectionObserver</h3>
     <pre>
 
-&lt;lite-vimeo videoid=&quot;364402896&quot; videotitle=&quot;This is a video title&quot; <b>autoload</b>&gt;&lt;/lite-vimeo&gt;
+&lt;lite-vimeo-combustion videoid=&quot;364402896&quot; videotitle=&quot;This is a video title&quot; <b>autoload</b>&gt;&lt;/lite-vimeo-combustion&gt;
     </pre>
-    <lite-vimeo
+    <lite-vimeo-combustion
       videoid="364402896"
       videotitle="This is a video title"
       autoload
-    ></lite-vimeo>
+    ></lite-vimeo-combustion>
 
     <h3>Autoplay</h3>
     <pre>
-&lt;lite-vimeo 
+&lt;lite-vimeo-combustion
    videoid=&quot;364402896&quot; 
    autoload <b>autoplay</b>
-   start=&quot;5m30s&quot;&gt;&lt;/lite-vimeo&gt;
+   start=&quot;5m30s&quot;&gt;&lt;/lite-vimeo-combustion&gt;
     </pre>
     <div>
-      <lite-vimeo videoid="364402896" autoload autoplay start="5m30s"></lite-vimeo>
+      <lite-vimeo-combustion videoid="364402896" autoload autoplay start="5m30s"></lite-vimeo-combustion>
     </div>
 
   </body>
