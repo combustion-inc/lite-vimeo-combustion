@@ -311,7 +311,7 @@ export class LiteVimeoEmbed extends HTMLElement {
       const apValue = ((this.autoLoad && this.autoPlay) || (!this.autoLoad)) ?
                         "autoplay=1" : "";
       const srcUrl = new URL(
-        `/video/${this.videoId}?${apValue}&loop=1&autopause=false&#t=${this.videoStartAt}`,
+        `/video/${this.videoId}?${apValue}&loop=1&autopause=false&muted=1&pip=0&#t=${this.videoStartAt}`,
         "https://player.vimeo.com/"
       );
 
