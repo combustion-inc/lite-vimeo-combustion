@@ -137,6 +137,18 @@ export class LiteVimeoEmbed extends HTMLElement {
     }
   }
 
+  get muted(): boolean {
+    return this.hasAttribute('muted');
+  }
+
+  set muted(value: boolean) {
+    if (value) {
+      this.setAttribute('muted', 'muted');
+    } else {
+      this.removeAttribute('muted');
+    }
+  }
+
 
   /**
    * Define our shadowDOM for the component
@@ -325,8 +337,9 @@ export class LiteVimeoEmbed extends HTMLElement {
       const apValue = ((this.autoLoad && this.autoPlay) || (!this.autoLoad)) ?
                         "autoplay=1" : "";
       const controlsValue = this.mobileAspect ? "&controls=0" : "";
+      const muted = this.muted ? "&muted=1" : "";
       const srcUrl = new URL(
-        `/video/${this.videoId}?${apValue}&loop=1&autopause=false&muted=1&pip=0${controlsValue}&#t=${this.videoStartAt}`,
+        `/video/${this.videoId}?${apValue}&loop=1&autopause=false${muted}&pip=0${controlsValue}&#t=${this.videoStartAt}`,
         "https://player.vimeo.com/"
       );
 
