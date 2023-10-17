@@ -1,5 +1,5 @@
 {
-  "name": "combustion-inc/lite-vimeo-combustion",
+  "name": "lite-vimeo-combustion",
   "description": "A web component that loads Vimeo embed iframes faster. ShadowDom based version of Paul Irish' concept. Forked to add looping functionality.",
   "author": "Alex Russell <slightlyoff@gmail.com>",
   "repository": {

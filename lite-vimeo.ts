@@ -125,6 +125,18 @@ export class LiteVimeoEmbed extends HTMLElement {
     }
   }
 
+  get vertical(): boolean {
+    return this.hasAttribute('vertical');
+  }
+
+  set vertical(value: boolean) {
+    if (value) {
+      this.setAttribute('vertical', 'vertical');
+    } else {
+      this.removeAttribute('vertical');
+    }
+  }
+
 
   /**
    * Define our shadowDOM for the component
@@ -136,6 +148,8 @@ export class LiteVimeoEmbed extends HTMLElement {
     var paddingBottom = "calc(100% / (16 / 9))";
     if(this.mobileAspect) {
       paddingBottom = "calc(100%)"
+    } else if(this.vertical) {
+      paddingBottom = "calc(100% / (9 / 16))"
     }
 
     shadowDom.innerHTML = `
