@@ -149,6 +149,19 @@ export class LiteVimeoEmbed extends HTMLElement {
     }
   }
 
+  // Sets video to a 4:5 aspect ratio
+  get fourfive(): boolean {
+    return this.hasAttribute('fourfive');
+  }
+
+  set fourfive(value: boolean) {
+    if(value) {
+      this.setAttribute('fourfive', 'fourfive');
+    } else {
+      this.removeAttribute('fourfive');
+    }
+  }
+
 
   /**
    * Define our shadowDOM for the component
@@ -162,6 +175,8 @@ export class LiteVimeoEmbed extends HTMLElement {
       paddingBottom = "calc(100%)"
     } else if(this.vertical) {
       paddingBottom = "calc(100% / (9 / 16))"
+    } else if(this.fourfive) {
+      paddingBottom = "calc(100% / (4 / 5))"
     }
 
     shadowDom.innerHTML = `
